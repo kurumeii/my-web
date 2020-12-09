@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="../dist/vendors/bootstrap/css/bootstrap.min.css">
+    <!-- FONT AWE -->
+    <link rel="stylesheet" href="../dist/vendors/fontawesome/css/all.css">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/login.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../dist/favicon.ico" type="image/x-icon">
+    <title>Login page</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-8 col-sm-10 mx-auto mt-5">
+                <div class="card card-signin">
+                    <div class="card-body">
+                        <p class="card-title text-center">
+                            <i class="fad fa-user-unlock"></i> Sign in
+                        </p>
+                        <form class="form-signin">
+                            <div id="form-user">
+                                <label for="inputUser">Username</label>
+                                <input type="username" id="inputUsername" class="form-control" placeholder="Email" autofocus>
+                            </div>
+                            <div id="form-password">
+                                <label for="inputPass">Password</label>
+                                <input type="password" id="inputPassword" class="form-control" placeholder="*********">
+                            </div>
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1">Remember password</label>
+                            </div>
+                            <div id="btn-group">
+                                <button class="btn" id="btn-login">
+                                    <a href="" id="login-btn">Login</a>
+                                </button>
+                                <p>Don't have an account yet? <a href="" id="signup-link">Signup</a> now</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../dist/vendors/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
