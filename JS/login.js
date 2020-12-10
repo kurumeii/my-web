@@ -1,26 +1,34 @@
-const loginSubmit = $('#login-btn');
 let email = "Email";
 let password = "Password";
-let empty = "can not be empty";
-let number = "can not contain a number";
-loginSubmit.on('click', (e)=>{
+let emptyErr = "can not be empty";
+let numberErr = "can not contain a number";
+let passErr = "has to be greater than 6 digits";
+const $email = $('#inputUsername').val();
+const $password = $('#inputPassword').val();
+
+$('.form-signin').on('submit', (e) => {
     e.preventDefault();
-    const $email = $('#inputUsername').val();
-    const $password = $('#inputPassword').val() ;
-    switch($email){
-        case "":
-            $('#form-user').append('<p/>', {
-                text: `${email} ${empty}`
-            });
-            break;
-        case ($email.match(/[^0-9]/)):
-            $('#form-user').append('<p/>', {
-                text: `${email} ${number}`
-            })
-            break;
+    if ($email == "") {
+        $('#form-user-err').text(`* ${email} ${emptyErr}`);
     }
-    switch($password){
-        case "":
-          $('#form-password').append('<p/>').text(`${password} ${empty}`);
+    if ($password == "" || $password.length <= 6) {
+        $('#form-password-err').text(`* ${password} ${numberErr} or ${passErr}`);
+        return false
     }
-})
+});
+
+$('#btn-login').on("click", (e) => {
+    e.preventDefault();
+    if($email == "test" && $password == "123456789") {
+       return $('#btn-login').attr("href", "/HTML/index/html")
+    }
+});
+
+
+$('#inputUsername').focusin(() => {
+    $('#form-user-err').fadeOut(600);
+});
+
+$('#inputPassword').focusin(() => {
+    $('#form-password-err').fadeOut(600);
+});

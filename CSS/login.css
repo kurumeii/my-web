@@ -65,3 +65,14 @@ body {
     display: inline;
     float: right;
 }
+
+#form-user-err,
+#form-password-err {
+    margin: 5px 0 0 0;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 600;
+    color: rgb(218, 159, 159);
+    border: none;
+    width: 80%;
+}
