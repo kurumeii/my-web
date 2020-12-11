@@ -25,7 +25,7 @@
                         <p class="card-title text-center">
                             <i class="fad fa-user-unlock"></i> Sign in
                         </p>
-                        <form class="form-signin" autocomplete="off">
+                        <form class="form-signin" method="GET" autocomplete="off">
                             <div id="form-user">
                                 <label for="inputUser">Username</label>
                                 <input type="username" id="inputUsername" class="form-control" placeholder="Email" autofocus>
@@ -41,7 +41,7 @@
                                 <label class="custom-control-label" for="customCheck1">Remember password</label>
                             </div>
                             <div id="btn-group">
-                                <a class="btn" id="btn-login">Login</a>
+                                <input class="btn" id="btn-login" type="submit" value="Login"></input>
                                 <p>Don't have an account yet? <a href="" id="signup-link">Signup</a>now</p>
                             </div>
                         </form>

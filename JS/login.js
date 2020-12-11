@@ -6,23 +6,16 @@ let passErr = "has to be greater than 6 digits";
 const $email = $('#inputUsername').val();
 const $password = $('#inputPassword').val();
 
-$('.form-signin').on('submit', (e) => {
-    e.preventDefault();
-    if ($email == "") {
-        $('#form-user-err').text(`* ${email} ${emptyErr}`);
-    }
-    if ($password == "" || $password.length <= 6) {
-        $('#form-password-err').text(`* ${password} ${numberErr} or ${passErr}`);
-        return false
-    }
-});
 
-$('#btn-login').on("click", (e) => {
-    e.preventDefault();
-    if($email == "test" && $password == "123456789") {
-       return $('#btn-login').attr("href", "/HTML/index/html")
-    }
-});
+    $('.form-signin').on('submit', function (e) {
+        e.preventDefault();
+        if ($email === "test" && $password === "123456789") {
+            $('.form-signin').attr("action", "/HTML/index/html")
+            return;
+           
+        }
+    });
+
 
 
 $('#inputUsername').focusin(() => {
